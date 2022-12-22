@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Playground from './components/playground';
+import AnotherPlayground from './components/AnotherPlayground';
 
 function App() {
+  const tabQueries = [
+    {
+        query: `
+            query {
+                # A default query
+            }
+        `
+    },
+    {
+        query: `
+        query {
+          # Another default tab query
+        }`
+    }
+]
+const defaulQuery = [{
+  query: `query {# add your query}`
+}]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Playground queryProp={defaulQuery} />
+      <p>The below playground should have only two tabs with the defaul queries</p>
+      <Playground queryProp={tabQueries} />
     </div>
   );
 }

@@ -9,7 +9,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@graphiql/plugin-explorer": "^0.1.12",
+    "@graphiql/react": "^0.15.0",
+    "@graphiql/toolkit": "^0.8.0",
+    "graphiql": "^2.2.0",
+    "graphql-ws": "^5.11.2"
   },
   "scripts": {
     "start": "react-scripts start",
